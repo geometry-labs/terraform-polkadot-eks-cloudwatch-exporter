@@ -1,0 +1,18 @@
+.idea
+
+.terraform.lock.hcl
+
+deployments/*
+
+# Terraform and terragrunt
+*.tfstate*
+*.tfstate.backup
+*.tfplan
+.terragrunt-cache/
+.terraform/
+
+terraform.tfvars
+
+id_rsa_test
+id_rsa_test.pub
+

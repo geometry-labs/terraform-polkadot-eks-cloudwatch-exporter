@@ -1,7 +1,7 @@
 
 # terraform-polkadot-eks-cloudwatch-exporter
 
-Terraform module to deploy a cloudwatch exporter on an EKS cluster for monitoring clusters for the Web3 Foundation ecosystem including polkadot and kusama. Creates an IAM assumable role with permissions to pull cloudwatch data that can be assumed by a service account within kubernetes. Used along with prometheus configs from [substrate-meta](https://github.com/geometry-labs/substrate-meta/tree/main/prometheus) repo. 
+Terraform module to deploy a cloudwatch exporter on an EKS cluster for monitoring clusters for the Web3 Foundation ecosystem including polkadot and kusama. Creates an IAM assumable role with permissions to pull cloudwatch data that can be assumed by a service account within kubernetes. Then applies a helm chart [prometheus-cloudwatch-exporter](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-cloudwatch-exporter) which can be scraped by prometheus. Used along with prometheus configs from [substrate-meta](https://github.com/geometry-labs/substrate-meta/tree/main/prometheus) repo. 
 
 Includes some examples for how to deploy but in practice it is deployed in via terragrunt. Requires outputs from an EKS cluster terraform module with IRSA enabled.  
 

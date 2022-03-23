@@ -60,7 +60,16 @@ data "aws_iam_policy_document" "cloudwatch_exporter" {
     actions = [
       "cloudwatch:ListMetrics",
       "cloudwatch:GetMetricStatistics",
-      "tag:GetResources"
+      "tag:GetResources",
+      "ce:GetCostForecast",
+      "ce:GetCostCategories",
+      "ce:GetCostAndUsageWithResources",
+      "ce:GetCostAndUsage",
+      "ce:GetDimensionValues",
+      "ce:GetTags",
+      "ce:GetUsageForecast",
+      "ce:ListTagsForResource",
+      "ce:ListCostCategoryDefinitions",
     ]
 
     resources = ["*"]
